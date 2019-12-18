@@ -2,40 +2,56 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>开关switch实现</title>
+		<title>返回顶部</title>
 		<script src="jquery.js"></script>
-		<script src="switch.js"></script>
-		<link href="switch.css" rel="stylesheet"/>
-		<style>			
-			.control{
-				width: 100px;
-				height: 50px;
+		<script src="backtop.js"></script>
+		<link href="backtop.css" rel="stylesheet" />
+		<style>
+			.outer{
+				height: 500px;
+				width: 100vw;
+			}
+			.div{
+				background-color: #DEB887;
+				 width: 500px;
+				height:500px; 
+				width: 500px;
+				height:500px;
+				margin-left: 50%;
+				transform: translateX(-50%);
+				margin-bottom: 50px;
+			} 			
+			button{
+				font-size: 100px;
+				margin-left: 50%;
+				transform: translateX(-50%);
+			}
+			.content{
+				background: #8A2BE2;
 			}
 			
 		</style>
 	</head>
 	<body>
-		<div class="control">
-			<div id='outer'>
-			<div id='circle'></div>
+		<div class="outer">
+			<div class="wrapper">
+				<div class="content">
+					<div class="div">1</div>
+					<div class="div">2</div>
+					<div class="div">3</div>
+					<div class="div">4</div>
+				</div>
+			
+			</div>
+			<button>返回顶部</button>
 		</div>
-		</div>
+		
+		
 		
 	</body>
 	<script>
 		$(document).ready(function(){
-			var active=function (){
-				console.log('外部活跃时调用')
-			}
-			var unactive=function (){
-				console.log('外部非活跃时调用')
-			}
-			var myswitch=new Switch('#outer','#circle',active,unactive);
-			myswitch.init();
-			$('#circle').click(function(){
-				myswitch.change();
-			})
-			
+			$(document).BackTop('button')
 		})
 	</script>
 </html>
