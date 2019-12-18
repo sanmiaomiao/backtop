@@ -1,6 +1,6 @@
 # backtop
 点击返回顶部按钮
-###
+###本插件为jquery插件，同时引入jquery.js  backtop.js  backtop.css,按照下面的方法即可使用
 	**本插件为jquery插件，需同时引入jquery.js
 	 * 
 	 * @param {
